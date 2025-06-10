@@ -11,12 +11,42 @@ import { opacity, SpacingToken } from "@/once-ui/types";
 import { Meta } from "@/once-ui/modules";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  return {
     title: home.title,
-    description: home.description,
-    baseURL: baseURL,
+    baseURL: baseURL,
     path: home.path,
-  });
+    image: home.image,
+    description: home.description,
+    keywords: ["Kgomotso Nkosi", "Future", "Leonard", "Quorvex", "software developer", "React", "Next.js", "AI", "mathematics", "question paper", "physics"],
+    authors: [{ name: "Future Nkosi", url: "https://futurecv.vercel.app" }],
+    openGraph: {
+      title: home.title,
+      description: home.description,
+      url: baseURL + home.path,
+      siteName: "Future's Developer Portfolio",
+      images: [
+        {
+          url: home.image,
+          width: 1200,
+          height: 630,
+          alt: "Portfolio of Kgomotso 'Future' Nkosi"
+        }
+      ],
+      locale: "en_ZA",
+      type: "website"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: home.title,
+      description: home.description,
+      images: [home.image],
+      creator: "@futurekgomotso"
+    },
+    metadataBase: new URL(baseURL),
+    alternates: {
+      canonical: baseURL + home.path
+    }
+  };
 }
 
 
@@ -48,6 +78,12 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     >
       <head>
         <meta name="google-site-verification" content="xXWElQQdEb1YSMqAy524N-B58KqSZqsf5zc0O8fWg3A" />
+        <meta name="keywords" content="
+  Future Nkosi, Kgomotso Nkosi, React developer South Africa,
+  Next.js portfolio, qorvex institute coding school, Quorvex AI tutor,
+  Fullstack software engineer Johannesburg, freelance web developer Gauteng
+">
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
