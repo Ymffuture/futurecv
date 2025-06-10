@@ -1,117 +1,127 @@
 ---
-title: "Updating the content of Magic Portfolio"
-summary: "Personalize the portfolio template with your own content."
-publishedAt: "2025-04-18"
-tag: "Magic Portfolio"
+title: "Customizing FutureCV for Kgomotso Nkosi"
+summary: "Personalize the FutureCV portfolio template with your own details, style, and branding."
+publishedAt: "2025-06-05"
+tag: "FutureCV Portfolio"
 ---
 
 ## Avatar
 
-Replace the `public/images/avatar.jpg` file with your own avatar image. It is used on the `/about` page as well as on the dynamically generated `open-graph` images.
+Replace the `public/images/avatar.jpg` with your professional photo or logo. This will be used on the `/about` page and for Open Graph preview images on social media.
 
 ## Favicon
 
-Replace the `src/app/favicon.ico` file with your own favicon.
+Update the `src/app/favicon.ico` file to your own favicon to match your brand identity or initials (e.g., `F.ico` for Future).
 
 ## Content
 
-Replace the content in the `resources/content.js` file with your own content. You can use custom components in most cases, since the props are usually declared as `ReactNode` instead of `string`, but it's important that you need to import them in the file.
+Update `src/app/resources/content.js` with your full profile data. You can embed custom components like `<InlineCode>` or `<Link>` for enhanced rendering, but ensure all used components are properly imported.
 
 <CodeBlock
-    marginBottom="16"
-    highlight="1-2"
-    codeInstances={[
-  {
-    code:
+    marginBottom="16"
+    highlight="1-2"
+    codeInstances={[
+  {
+    code:
 `import { InlineCode } from "@/once-ui/components";
 import Link from "next/link";
 
 const person = {
-  ...
+  ...
 };`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
+    language: "tsx",
+    label: "src/app/resources/content.js"
+  }
 ]} />
-
-The imports above would let us use `InlineCode` and `Link` components in the content file.
 
 ### Personal details
 
-Your personal details are used across the whole app to render personalized headings, labels and images. Languages are displayed on the `/about` page, and location and time in the header.
+Your details power labels, meta tags, and descriptions throughout the app. Your location will display your local time, and languages are shown on the About page.
 
 <CodeBlock
-    marginBottom="16"
-    highlight="2-3,7-10"
-    codeInstances={[
-  {
-    code:
+    marginBottom="16"
+    highlight="2-3,7-10"
+    codeInstances={[
+  {
+    code:
 `const person = {
-    firstName: "Selene",
-    lastName: "Yu",
-    get name() {
-      return "...";
-    },
-    role: "Design Engineer",
-    avatar: "/images/avatar.jpg",
-    location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+    firstName: "Kgomotso",
+    lastName: "Nkosi",
+    get name() {
+      return "Kgomotso Nkosi (Future)";
+    },
+    role: "Software Engineer | Web Developer | Educator",
+    avatar: "/images/avatar.jpg",
+    location: "Africa/Johannesburg",
+    languages: ["English", "Zulu", "Sesotho"],
 };`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
+    language: "tsx",
+    label: "src/app/resources/content.js"
+  }
 ]} />
 
 ### Social links
 
-Social links are rendered on the `/about` page and in the footer based on the array configured in the `social` object. You can set custom icons to each, but don't forget to import them in `src/once-ui/icons.ts`. Read the Once UI documentation](https://once-ui.com/docs/icons) for more information.
+Update the `social` array to reflect your actual social handles. Make sure you import the correct icons in `src/once-ui/icons.ts`.
 
 <CodeBlock
-    marginBottom="16"
-    codeInstances={[
-  {
-    code:
+    marginBottom="16"
+    codeInstances={[
+  {
+    code:
 `const social = [
-    {
-      name: "GitHub",
-      icon: "github",
-      link: "https://github.com/once-ui-system/nextjs-starter",
-    },
-    {
-      name: "Email",
-      icon: "email",
-      link: "mailto:lorant@once-ui.com",
-    },
+  {
+    name: "LinkedIn",
+    icon: "linkedin",
+    link: "https://www.linkedin.com/in/kgomotsonkosi-l",
+  },
+  {
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/futurekgomotso",
+  },
+  {
+    name: "Email",
+    icon: "email",
+    link: "mailto:futurekgomotso@gmail.com",
+  },
 ];`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
+    language: "tsx",
+    label: "src/app/resources/content.js"
+  }
 ]} />
 
 ### Pages
 
-Each page have it's own object that manages the personalized content, such as headings, subheadings, images and dynamic data.
+Each page has a content object for managing personalized copy. Here's how your homepage might look:
 
 <CodeBlock
-    marginBottom="16"
-    codeInstances={[
-  {
-    code:
+    marginBottom="16"
+    codeInstances={[
+  {
+    code:
 `const home = {
-    label: "Home",
-    title: "Selene Yu's Portfolio",
-    description: "Portfolio website showcasing my work as a Design Engineer",
-    headline: <>Design engineer and builder</>,
-    subline: (
-      <>
-        I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-        <br /> user experiences. After hours, I build my own projects.
-      </>
-    ),
+    label: "Home",
+    title: "Kgomotso Nkosi — FutureCV",
+    description: "Professional portfolio of Kgomotso Nkosi (Future) — a software engineer passionate about web development, education, and mathematics.",
+    headline: <>Software Engineer. Web Educator. Innovator.</>,
+    subline: (
+      <>
+        I'm <InlineCode>Future</InlineCode>, a South African software engineer passionate about coding, science, and education. 
+        <br />I specialize in full-stack web apps with React, PHP, Python, and Next.js.
+      </>
+    ),
 };`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
+    language: "tsx",
+    label: "src/app/resources/content.js"
+  }
 ]} />
 
-The `label` property is used in the header navigation. The `title` property is used for the page title and the `description` property is used for the page description. They are also used in meta- and open graph tags.
+---
+
+Would you like me to also provide:
+- `content.js` starter version with this already written?
+- `favicon.ico` template?
+- Custom OG image for social sharing?  
+Let me know what you'd like generated next.
+
