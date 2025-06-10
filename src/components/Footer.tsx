@@ -63,8 +63,8 @@ export const Footer = () => {
       >
         <Text onBackground="neutral-weak">
           Powered by{" "}
-          <SmartLink href="https://once-ui.com" target="_blank" rel="noopener noreferrer">
-            Once UI
+          <SmartLink href="https://quorvexinstitute.vercel.app/" target="_blank" rel="noopener noreferrer">
+            Quorvex Institute
           </SmartLink>{" "}
           / All rights reserved
         </Text>
