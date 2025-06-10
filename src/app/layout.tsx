@@ -82,7 +82,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   Future Nkosi, Kgomotso Nkosi, React developer South Africa,
   Next.js portfolio, qorvex institute coding school, Quorvex AI tutor,
   Fullstack software engineer Johannesburg, freelance web developer Gauteng
-">
+"/>
 
         <script
           dangerouslySetInnerHTML={{
