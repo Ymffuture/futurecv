@@ -1,17 +1,17 @@
 ---
 title: "Create, edit and delete blog posts"
-summary: "Create, edit and delete posts in the blog section of your Magic Portfolio."
+summary: "Create, edit and delete posts in the blog section of Future's Magic Portfolio (Quorvex Institute & Greencodien)."
 publishedAt: "2025-03-17"
 tag: "Magic Portfolio"
 ---
 
-## Manage posts
+## ✍️ Manage Posts
 
-You can create, edit and delete posts by adding, modifying or removing `*.mdx` files in the `src/app/blog/posts` directory.
+You can create, edit, and delete blog posts by adding, modifying, or removing `*.mdx` files in the `src/app/blog/posts` directory.
 
-## Frontmatter
+## 📄 Frontmatter
 
-The frontmatter is used to set the post's metadata: title, description, image, and tags. It's used in the post's page and in meta- and open graph tags.
+Frontmatter sets the metadata for each blog post — including **title**, **description**, **image**, and **tags**. These properties power the SEO, open graph tags, and UI presentation.
 
 <CodeBlock
     marginBottom="16"
@@ -19,25 +19,25 @@ The frontmatter is used to set the post's metadata: title, description, image, a
       {
         code:
 `---
-title: "Arriving to a new milestone in my career"
-publishedAt: "2024-04-08"
-image: "/images/gallery/img-02.jpg"
-summary: "Every career is a journey, filled with challenges, growth, and those significant moments that mark a shift in our path."
-tag: "Journal"
+title: "Mastering React and MongoDB"
+publishedAt: "2025-06-01"
+image: "/images/gallery/tech-blog.jpg"
+summary: "A deep dive into building scalable fullstack apps with React, MongoDB, and Express."
+tag: "ReactJS"
 ---`,
         language: "tsx",
-        label: "src/app/blog/posts/post-1.mdx"
+        label: "src/app/blog/posts/react-mongodb.mdx"
       }
     ]}
 />
 
-## MDX syntax
+## ⚡ MDX Syntax
 
-You can use MDX to write the content of your posts. It helps you write rich and dynamic content with minimal code. Some MDX elements will be automatically transformed to Once UI components to integrate better in the design and add additional functionality.
+Write content using **MDX**, which lets you blend Markdown with React components. Your content is transformed with **Once UI** components for rich styling and enhanced UX.
 
-## Custom components
+## 🧩 Custom Components
 
-You can use custom components in MDX files, but you need to import them first in the `src/components/mdx.tsx` file.
+To use custom components inside blog posts, import them inside the `src/components/mdx.tsx` file.
 
 <CodeBlock
     marginBottom="16"
@@ -64,8 +64,29 @@ You can use custom components in MDX files, but you need to import them first in
     ]}
 />
 
-As you can see, the `Table` and `CodeBlock` components are already imported and available for use. You can add more by simply importing them to this file and passing them to the `components` object.
+## 🚀 Hot Reload
 
-## Hot reload
+MDX files do **not currently support hot reloading**, but a restart of the dev server reflects changes instantly. Future support is in progress.
 
-Hot reload of MDX files is currently not supported, but we're working on it.
+---
+
+## 👤 Author Profile
+
+- **Name:** Kgomotso Nkosi (aka Future)  
+- **Role:** Software Engineer & Founder of Quorvex Institute / Greencodien  
+- **Location:** Orange Farm, Johannesburg South, South Africa  
+- **Languages:** English, Setswana  
+- **Chinese Zodiac:** Rat  
+- **Lucky Colors:** Blue (#1E90FF), Gold (#FFD700), Green (#32CD32)  
+- **Portfolio:** [https://kgomotso-nkosi.vercel.app](https://kgomotso-nkosi.vercel.app)  
+- **Academy Site:** [https://quorvexinstitute.vercel.app](https://quorvexinstitute.vercel.app)  
+- **Main Blog:** [https://kgomotso-nkosi.vercel.app/blog](https://kgomotso-nkosi.vercel.app/blog)  
+- **LinkedIn:** [https://linkedin.com/in/kgomotsonkosi-l](https://linkedin.com/in/kgomotsonkosi-l)  
+- **Email:** [futurekgomotso@gmail.com](mailto:futurekgomotso@gmail.com)
+
+---
+
+🧠 This blog engine is optimized for fast dev workflows and advanced personalization using your content structure. Customize and publish like a pro with full Markdown/MDX power + reusable components.
+
+Need help building a new page or blog template for your projects like Quorvex or Greencodien? Just ask!
+
