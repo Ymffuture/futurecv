@@ -11,14 +11,17 @@ import { opacity, SpacingToken } from "@/once-ui/types";
 import { Meta } from "@/once-ui/modules";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-    image: home.image,
-  });
+  return {
+    title: home.title,
+    description: home.description,
+    metadataBase: new URL(baseURL),
+    verification: {
+      google: "xXWElQQdEb1YSMqAy524N-B58KqSZqsf5zc0O8fWg3A"
+    }
+  };
 }
+
+
 
 interface RootLayoutProps {
   children: React.ReactNode;
