@@ -1,4 +1,4 @@
-// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
+
 const baseURL = "https://futurecv.vercel.app";
 
 const routes = {
@@ -9,12 +9,11 @@ const routes = {
   "/gallery": true,
 };
 
-// Enable password protection on selected routes
-// Set password in the .env file, refer to .env.example
 const protectedRoutes = {
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
+// Fonts
 import { Geist } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 
@@ -37,42 +36,45 @@ const font = {
   code: monoFont,
 };
 
+// === STYLE ===
+// Lucky Colors: Blue (#1E90FF), Gold (#FFD700), Green (#32CD32)
 const style = {
-  theme: "dark", // theme is not necessary when using ThemeProvider (default)
-  neutral: "gray", // sand | gray | slate
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
-  transition: "all", // all | micro | macro
-  scaling: "100" // 90 | 95 | 100 | 105 | 110
+  theme: "dark",
+  neutral: "gray",
+  brand: "blue",       // Maps to your primary #1E90FF
+  accent: "yellow",    // Maps to your gold #FFD700
+  solid: "contrast",
+  solidStyle: "plastic", // Gives depth and a modern shine
+  border: "playful",
+  surface: "translucent",
+  transition: "all",
+  scaling: "105",        // Slight upscale for smooth motion/hover
 };
 
+// === EFFECTS ===
 const effects = {
   mask: {
-    cursor: false,
+    cursor: true,
     x: 50,
     y: 0,
-    radius: 100,
+    radius: 120, // Slightly larger radius for a sleek spotlight
   },
   gradient: {
-    display: false,
-    opacity: 100,
+    display: true,
+    opacity: 85,
     x: 50,
-    y: 60,
+    y: 50,
     width: 100,
-    height: 50,
-    tilt: 0,
-    colorStart: "accent-background-strong",
-    colorEnd: "page-background",
+    height: 80,
+    tilt: 20,
+    colorStart: "#1E90FF",  // Blue
+    colorEnd: "#32CD32",    // Green
   },
   dots: {
     display: true,
     opacity: 40,
     size: "2",
-    color: "brand-background-strong",
+    color: "#FFD700", // Gold dots subtly in the background
   },
   grid: {
     display: false,
@@ -91,12 +93,14 @@ const effects = {
   },
 };
 
+// === DISPLAY ===
 const display = {
   location: true,
   time: true,
-  themeSwitcher: true
+  themeSwitcher: true,
 };
 
+// === MAILCHIMP ===
 const mailchimp = {
   action: "https://url/subscribe/post?parameters",
   effects: {
@@ -114,14 +118,14 @@ const mailchimp = {
       width: 50,
       height: 50,
       tilt: 0,
-      colorStart: "accent-background-strong",
+      colorStart: "#FFD700", // Gold highlight
       colorEnd: "static-transparent",
     },
     dots: {
       display: true,
       opacity: 20,
       size: "2",
-      color: "brand-on-background-weak",
+      color: "#1E90FF", // Blue dots
     },
     grid: {
       display: false,
@@ -141,4 +145,13 @@ const mailchimp = {
   },
 };
 
-export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL, font };
+export {
+  routes,
+  protectedRoutes,
+  effects,
+  style,
+  display,
+  mailchimp,
+  baseURL,
+  font,
+};
