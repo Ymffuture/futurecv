@@ -1,4 +1,4 @@
-import "@/once-ui/styles/index.scss";
+Limport "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
 import classNames from "classnames";
@@ -18,7 +18,7 @@ export async function generateMetadata() {
     image: home.image,
     description: home.description,
     keywords: ["Kgomotso Nkosi", "Future", "Leonard", "Quorvex", "software developer", "React", "Next.js", "AI", "mathematics", "question paper", "physics"],
-    authors: [{ name: "Future Nkosi", url: "https://futurecv.vercel.app" }],
+    authors: [{ name: "Kgomotso Leonard Nkosi", url: "https://futurecv.vercel.app" }],
     openGraph: {
       title: home.title,
       description: home.description,
