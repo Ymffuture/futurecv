@@ -26,15 +26,14 @@ export const Footer = () => {
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
-            {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-            / Build your portfolio with{" "}
-            <SmartLink
-              href="https://once-ui.com/templates/magic-portfolio"
-            >
+            {" / "}Built with{" "}
+            <SmartLink href="https://once-ui.com/templates/magic-portfolio" target="_blank" rel="noopener noreferrer">
               Once UI
-            </SmartLink>
+            </SmartLink>{" "}
+            – UI kit for stunning developer portfolios.
           </Text>
         </Text>
+
         <Flex gap="16">
           {social.map(
             (item) =>
@@ -47,10 +46,34 @@ export const Footer = () => {
                   size="s"
                   variant="ghost"
                 />
-              ),
+              )
           )}
         </Flex>
       </Flex>
+
+      <Flex
+        className={styles.mobile}
+        maxWidth="m"
+        paddingY="4"
+        paddingX="16"
+        gap="16"
+        horizontal="space-between"
+        vertical="center"
+        style={{ fontSize: "12px", opacity: 0.8 }}
+      >
+        <Text onBackground="neutral-weak">
+          Powered by{" "}
+          <SmartLink href="https://once-ui.com" target="_blank" rel="noopener noreferrer">
+            Once UI
+          </SmartLink>{" "}
+          / All rights reserved
+        </Text>
+        <Flex gap="12">
+          <SmartLink href="/privacy-policy">Privacy</SmartLink>
+          <SmartLink href="/terms-of-service">Terms</SmartLink>
+        </Flex>
+      </Flex>
+
       <Flex height="80" show="s"></Flex>
     </Flex>
   );
