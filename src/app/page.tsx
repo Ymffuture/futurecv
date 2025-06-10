@@ -10,13 +10,21 @@ import { Posts } from "@/components/blog/Posts";
 import { Meta, Schema } from "@/once-ui/modules";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-  });
+  const meta = Meta.generate({
+    title: home.title,
+    description: home.description,
+    baseURL,
+    path: home.path
+  });
+
+  return {
+    ...meta,
+    verification: {
+      google: "xXWElQQdEb1YSMqAy524N-B58KqSZqsf5zc0O8fWg3A"
+    }
+  };
 }
+
 
 export default function Home() {
   return (
