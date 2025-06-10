@@ -1,7 +1,9 @@
+
 "use client";
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 import { Fade, Flex, Line, ToggleButton } from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
@@ -12,7 +14,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 type TimeDisplayProps = {
   timeZone: string;
-  locale?: string; // Optionally allow locale, defaulting to 'en-GB'
+  locale?: string;
 };
 
 const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
@@ -34,20 +36,24 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
 
     updateTime();
     const intervalId = setInterval(updateTime, 1000);
-
     return () => clearInterval(intervalId);
   }, [timeZone, locale]);
 
   return <>{currentTime}</>;
 };
 
-export default TimeDisplay;
-
 export const Header = () => {
   const pathname = usePathname() ?? "";
 
   return (
     <>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="xXWElQQdEb1YSMqAy524N-B58KqSZqsf5zc0O8fWg3A"
+        />
+      </Head>
+
       <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9} />
       <Fade show="s" fillWidth position="fixed" bottom="0" to="top" height="80" zIndex={9} />
       <Flex
