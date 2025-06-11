@@ -102,7 +102,7 @@ const display = {
 
 // === MAILCHIMP ===
 const mailchimp = {
-  action: "https://url/subscribe/post?parameters",
+  action: "https://app.us3.list-manage.com/subscribe/post?parameters",
   effects: {
     mask: {
       cursor: true,
