@@ -102,7 +102,7 @@ const display = {
 
 // === MAILCHIMP ===
 const mailchimp = {
-  action: "https://app.us3.list-manage.com/subscribe/post?parameters",
+  action: "https://app.us3.list-manage.com/subscribe?u=1b52e139260a59387a5bd978c&id=2d775f2402",
   effects: {
     mask: {
       cursor: true,
