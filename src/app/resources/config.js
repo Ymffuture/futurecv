@@ -10,6 +10,7 @@ const routes = {
 };
 
 const protectedRoutes = {
+  "/gallery": true,
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
