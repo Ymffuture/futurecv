@@ -81,8 +81,13 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <meta name="keywords" content="
   Future Nkosi, Kgomotso Nkosi, React developer South Africa,
   Next.js portfolio, qorvex institute coding school, Quorvex AI tutor,
-  Fullstack software engineer Johannesburg, freelance web developer Gauteng
+  Fullstack software engineer Johannesburg, freelance web developer Gauteng,
+  Kgomotso Leonard Nkosi, Future, Leonard, Quorvex, software developer, React, Next.js, AI, mathematics, question paper, physics
 "/>
+
+<meta name="author" content="Kgomotso Leonard Nkosi">
+<link rel="author" href="https://futurecv.vercel.app" />
+
 
         <script
           dangerouslySetInnerHTML={{
