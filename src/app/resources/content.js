@@ -36,9 +36,9 @@ const social = [
     link: "https://www.linkedin.com/kgomotsonkosi-l",
   },
   {
-    name: "X",
-    icon: "x",
-    link: "https://x.com/futureFBG",
+    name: "Threads",
+    icon: "threads",
+    link: "https://threads.com/futureymf",
   },
   {
     name: "Email",
