@@ -6,11 +6,11 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "software Engineer",
   avatar: "/images/avatar.jpg",
   email: "Futurekgomotso@gmail.com",
   location: "Africa/Johannesburg", // Updated to valid IANA time zone
-  languages: ["English", "SiSwati"],
+  languages: ["English", "SiSwati", "IsiZulu" ],
 };
 
 const newsletter = {
@@ -56,12 +56,12 @@ const home = {
   headline: <>Building bridges between design and code</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    title: <>Recent projects: <strong className="ml-4">Once UI portfolio & Blog</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
-      I'm {person.firstName}, a design engineer at{" "}
+      I'm {person.firstName}, a software engineer at{" "}
       <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }} />, where I craft intuitive
       <br /> user experiences. After hours, I build my own projects.
     </>
@@ -89,7 +89,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Kgomotso is a Johannesburg-based design engineer with a passion for transforming complex
+        Kgomotso is a Johannesburg-based software engineer with a passion for transforming complex
         challenges into simple, elegant design solutions. His work spans digital interfaces,
         interactive experiences, and the convergence of design and technology.
       </>
@@ -100,18 +100,14 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Department of South Africa statistics ",
+        timeframe: "2022",
+        role: "field worker",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+          Clean and open data capturing using the latest technology .
           </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          
         ],
         images: [
           {
@@ -123,18 +119,14 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Department of education ",
+        timeframe: "2018 - 2021",
+        role: "Tutoring",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Managing school data. For all students marks. 
           </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          
         ],
         images: [],
       },
@@ -146,11 +138,11 @@ const about = {
     institutions: [
       {
         name: "UNISA",
-        description: <>Completed Higher Certificate in Mathematics and Statistics.</>,
+        description: <> Not Completed Higher Certificate in Mathematics and Statistics.</>,
       },
       {
         name: "Melsoft Academy",
-        description: <>Studied Software Engineering.</>,
+        description: <>Studied Software Engineering.(Not completed) </>,
       },
     ],
   },
@@ -178,7 +170,7 @@ const about = {
       },
       {
         title: "Next.js",
-        description: <>Building next-gen apps with Next.js + Once UI + Supabase.</>,
+        description: <>Building next-gen apps with Next.js + Once UI + Supabase. For other projects </>,
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
