@@ -23,11 +23,11 @@ export const Footer = () => {
         vertical="center"
       >
         <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
+          <Text onBackground="neutral-weak">© 2023 - {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
             {" / "}Built with{" "}
-            <SmartLink href="https://once-ui.com/templates/magic-portfolio" target="_blank" rel="noopener noreferrer">
+            <SmartLink href="https://once-ui.com" target="_blank" rel="noopener noreferrer">
               Once UI
             </SmartLink>{" "}
             – UI kit for stunning developer portfolios.
