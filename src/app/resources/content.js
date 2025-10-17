@@ -294,8 +294,7 @@ const about = {
         ],
       },
     ],
-  },
-
+  };
 
 const blog = {
   path: "/blog",
@@ -356,3 +355,4 @@ export {
   work,
   gallery,
 };
+
