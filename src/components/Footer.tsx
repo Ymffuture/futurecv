@@ -26,11 +26,11 @@ export const Footer = () => {
           <Text onBackground="neutral-weak">© 2023 - {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
-            {" / "}Built with{" "}
-            <SmartLink href="https://once-ui.com" target="_blank" rel="noopener noreferrer">
-              Once UI
+            {" / "}Powered by{" "}
+            <SmartLink href="https://filebank.vercel.app" target="_blank" rel="noopener noreferrer">
+              Famacloud
             </SmartLink>{" "}
-            – UI kit for stunning developer portfolios.
+    
           </Text>
         </Text>
 
@@ -78,3 +78,4 @@ export const Footer = () => {
     </Flex>
   );
 };
+
