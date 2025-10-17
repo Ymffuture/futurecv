@@ -141,6 +141,10 @@ const about = {
         description: <> Not Completed Higher Certificate in Mathematics and Statistics.</>,
       },
       {
+        name: "Retail customer service",
+        description: <> Completed  Certificate in retail.</>,
+      },
+      {
         name: "Melsoft Academy",
         description: <>Studied Software Engineering.(Not completed) </>,
       },
@@ -243,6 +247,7 @@ export {
   work,
   gallery,
 };
+
 
 
 
