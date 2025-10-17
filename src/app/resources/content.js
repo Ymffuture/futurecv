@@ -1,4 +1,5 @@
 import { Logo } from "@/once-ui/components";
+import { motion } from "framer-motion";
 
 const person = {
   firstName: "Kgomotso",
@@ -9,8 +10,8 @@ const person = {
   role: "software Engineer and Tutor",
   avatar: "/images/avatar.jpg",
   email: "futurekgomotso@gmail.com",
-  location: "Africa/Johannesburg", // Updated to valid IANA time zone
-  languages: ["English", "SiSwati", "IsiZulu" ],
+  location: "Africa/Johannesburg", // valid IANA time zone
+  languages: ["English", "SiSwati", "IsiZulu"],
 };
 
 const newsletter = {
@@ -100,15 +101,10 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Department of South Africa statistics ",
+        company: "Department of South Africa statistics",
         timeframe: "2022",
-        role: "field worker",
-        achievements: [
-          <>
-          Clean and open data capturing using the latest technology .
-          </>,
-          
-        ],
+        role: "Field Worker",
+        achievements: [<>Clean and open data capturing using the latest technology.</>],
         images: [
           {
             src: "/images/projects/project-01/cover-01.jpg",
@@ -119,31 +115,26 @@ const about = {
         ],
       },
       {
-        company: "Department of education ",
+        company: "Department of Education",
         timeframe: "2018 - 2021",
-        role: "Tutoring",
-        achievements: [
-          <>
-            Managing school data. For all students marks. 
-          </>,
-          
-        ],
+        role: "Tutor",
+        achievements: [<>Managed school data and maintained student performance records.</>],
         images: [],
       },
     ],
   },
-      
-    studies: {
+
+  // ✅ UPDATED STUDIES SECTION
+  studies: {
     display: true,
-    title: "Education & Studies",
+    title: "Studies",
     institutions: [
       {
         name: "University of South Africa (UNISA)",
         description: (
           <>
-            Pursued a <strong>Higher Certificate in Mathematics and Statistics</strong> — 
-            not yet completed. Built strong analytical skills, data-driven reasoning,
-            and problem-solving abilities applied to software algorithms and performance analysis.
+            Studied <strong>Higher Certificate in Mathematics and Statistics</strong> — focused on
+            analytical thinking, probability, and data interpretation.
           </>
         ),
       },
@@ -151,150 +142,143 @@ const about = {
         name: "Melsoft Academy",
         description: (
           <>
-            Studied <strong>Software Engineering</strong> — course not yet completed.
-            Gained hands-on experience in full-stack web development using the 
-            <strong> MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>,
-            REST APIs, Git, and deployment best practices.
+            Studied <strong>Software Engineering</strong>, specializing in full-stack web
+            development using <strong>HTML, CSS, JavaScript, React, Node.js, PHP, and Python</strong>.
           </>
         ),
       },
       {
-        name: "Retail Customer Service Training Program",
+        name: "Retail Customer Service",
         description: (
           <>
-            Completed a <strong>Certificate in Retail Customer Service</strong>, 
-            emphasizing communication, teamwork, and professionalism in client-facing roles. 
-            Developed a foundation for customer-oriented design and user experience understanding.
-          </>
-        ),
-      },
-      {
-        name: "Continuous Learning & Certifications",
-        description: (
-          <>
-            Actively expanding knowledge through online platforms (FreeCodeCamp, Coursera, YouTube)
-            in <strong>TypeScript, Next.js 14, React 18+, Redux Toolkit, TailwindCSS, and Cloud Services</strong>.
+            Completed <strong>Certificate in Retail Customer Service</strong> — gaining skills in
+            communication, data handling, and customer relations.
           </>
         ),
       },
     ],
   },
 
+  // ✅ UPDATED TECHNICAL SECTION WITH INLINE STYLES + ANIMATION
   technical: {
     display: true,
     title: "Technical Skills",
     skills: [
       {
         title: "Frontend Development",
+        level: 90,
         description: (
           <>
-            Skilled in <strong>React.js (Hooks, Context API, Redux Toolkit)</strong>,
-            <strong> Next.js 14 (App Router, Server Components, SSR/SSG)</strong>, 
-            <strong>TailwindCSS</strong>, and <strong>Framer Motion</strong> for smooth UI/UX animations.
-            Experienced in creating high-performance, responsive, and accessible UIs.
+            Expertise in <strong>React.js, Next.js, HTML, CSS, JavaScript (ES6+)</strong>, and{" "}
+            <strong>TailwindCSS</strong>. Builds fast, accessible, and SEO-optimized UIs with API
+            integration and state management (Redux Toolkit, Context API).
           </>
         ),
-        images: [
-          {
-            src: "/images/projects/project-frontend.jpg",
-            alt: "Frontend Project Example",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
         title: "Backend Development",
+        level: 85,
         description: (
           <>
-            Proficient with <strong>Node.js, Express.js, and MongoDB</strong> for building scalable REST APIs.
-            Experience with <strong>authentication systems</strong> (JWT, OAuth, Google & Microsoft login),
-            <strong>role-based access control</strong>, and secure backend practices.
+            Skilled in <strong>Node.js, Express.js, MongoDB, and PHP</strong> for creating robust
+            REST APIs, authentication systems (JWT, OAuth), and scalable backend services.
           </>
         ),
-        images: [
-          {
-            src: "/images/projects/backend-api.jpg",
-            alt: "Backend Development Project",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
-        title: "UI/UX Design & Prototyping",
+        title: "Programming & Tools",
+        level: 80,
         description: (
           <>
-            Experienced in <strong>Figma</strong> for wireframing and UI prototyping. 
-            Adept at translating designs into production-ready React components 
-            using <strong>Once UI</strong> and modern design systems.
+            Proficient with <strong>Python</strong> for scripting and automation. Uses{" "}
+            <strong>Git, GitHub, VS Code, Cloudinary</strong> and follows best CI/CD workflows.
           </>
         ),
-        images: [
-          {
-            src: "/images/projects/figma-prototype.jpg",
-            alt: "Figma UI Prototype",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
-        title: "DevOps & Deployment",
+        title: "UI/UX Design",
+        level: 75,
         description: (
           <>
-            Knowledge of <strong>Git & GitHub</strong> for version control, 
-            and deployment using <strong>Vercel, Render, and Cloudinary</strong> integrations.
-            Comfortable with CI/CD pipelines and environment configuration.
+            Designs and prototypes in <strong>Figma</strong> — transforming creative concepts into
+            elegant, responsive interfaces.
           </>
         ),
-        images: [
-          {
-            src: "/images/projects/devops-deploy.jpg",
-            alt: "DevOps Workflow",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Testing & Debugging",
-        description: (
-          <>
-            Experienced with <strong>Jest</strong>, <strong>React Testing Library</strong>, 
-            and <strong>Cypress</strong> for unit, integration, and end-to-end testing.
-            Familiar with Chrome DevTools and React Profiler for performance optimization.
-          </>
-        ),
-        images: [
-          {
-            src: "/images/projects/testing.jpg",
-            alt: "Testing and Debugging",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Soft Skills",
-        description: (
-          <>
-            Strong communication, teaching, and problem-solving abilities. 
-            Experience tutoring students in <strong>mathematics, science, and coding</strong>,
-            fostering clear understanding of complex topics.
-          </>
-        ),
-        images: [
-          {
-            src: "/images/projects/softskills.jpg",
-            alt: "Tutoring & Mentorship",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
     ],
+  },
+};
+
+// 🎨 Inline Animated Component for Rendering Technical Skills
+export const TechnicalSkills = () => {
+  const containerStyle = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    gap: "20px",
+    padding: "20px",
   };
+
+  const cardStyle = {
+    backgroundColor: "#0f172a",
+    borderRadius: "16px",
+    padding: "20px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+    color: "white",
+    transition: "transform 0.3s ease",
+  };
+
+  const titleStyle = {
+    fontSize: "18px",
+    fontWeight: "600",
+    marginBottom: "10px",
+    color: "#38bdf8",
+  };
+
+  const barContainerStyle = {
+    height: "8px",
+    backgroundColor: "#1e293b",
+    borderRadius: "4px",
+    overflow: "hidden",
+    marginTop: "12px",
+  };
+
+  const descriptionStyle = {
+    fontSize: "14px",
+    color: "#cbd5e1",
+    marginTop: "8px",
+    lineHeight: "1.6",
+  };
+
+  return (
+    <div style={containerStyle}>
+      {about.technical.skills.map((skill, index) => (
+        <motion.div
+          key={index}
+          style={cardStyle}
+          whileHover={{ scale: 1.03 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+        >
+          <div style={titleStyle}>{skill.title}</div>
+          <div style={descriptionStyle}>{skill.description}</div>
+
+          <div style={barContainerStyle}>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: `${skill.level}%` }}
+              transition={{ duration: 1 }}
+              style={{
+                height: "100%",
+                background: "linear-gradient(90deg, #38bdf8, #3b82f6)",
+              }}
+            />
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+};
 
 const blog = {
   path: "/blog",
@@ -316,43 +300,13 @@ const gallery = {
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
   images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
+    { src: "/images/gallery/horizontal-1.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/horizontal-2.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/horizontal-3.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/horizontal-4.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/vertical-1.jpg", alt: "image", orientation: "vertical" },
   ],
 };
 
-// Export the structured objects
-export {
-  person,
-  newsletter,
-  social,
-  home,
-  about,
-  blog,
-  work,
-  gallery,
-};
+export { person, newsletter, social, home, about, blog, work, gallery };
 
