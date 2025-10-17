@@ -6,9 +6,9 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "software Engineer",
+  role: "software Engineer and Tutor",
   avatar: "/images/avatar.jpg",
-  email: "Futurekgomotso@gmail.com",
+  email: "futurekgomotso@gmail.com",
   location: "Africa/Johannesburg", // Updated to valid IANA time zone
   languages: ["English", "SiSwati", "IsiZulu" ],
 };
@@ -56,13 +56,13 @@ const home = {
   headline: <>Building bridges between design and code</>,
   featured: {
     display: true,
-    title: <>Recent projects: <strong className="ml-4">Once UI portfolio & Blog</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Recent projects: <strong className="ml-4">Once UI portfolio & famacloud</strong></>,
+    href: "/about",
   },
   subline: (
     <>
       I'm {person.firstName}, a software engineer at{" "}
-      <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }} />, where I craft intuitive
+      <Logo icon={true} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }} />, where I craft intuitive
       <br /> user experiences. After hours, I build my own projects.
     </>
   ),
@@ -243,4 +243,5 @@ export {
   work,
   gallery,
 };
+
 
