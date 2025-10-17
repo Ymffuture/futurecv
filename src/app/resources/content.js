@@ -1,5 +1,4 @@
 import { Logo } from "@/once-ui/components";
-import { motion } from "framer-motion";
 
 const person = {
   firstName: "Kgomotso",
@@ -10,7 +9,7 @@ const person = {
   role: "software Engineer and Tutor",
   avatar: "/images/avatar.jpg",
   email: "futurekgomotso@gmail.com",
-  location: "Africa/Johannesburg", // valid IANA time zone
+  location: "Africa/Johannesburg", // Updated to valid IANA time zone
   languages: ["English", "SiSwati", "IsiZulu"],
 };
 
@@ -101,10 +100,12 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Department of South Africa statistics",
+        company: "Department of South Africa statistics ",
         timeframe: "2022",
-        role: "Field Worker",
-        achievements: [<>Clean and open data capturing using the latest technology.</>],
+        role: "field worker",
+        achievements: [
+          <>Clean and open data capturing using the latest technology.</>,
+        ],
         images: [
           {
             src: "/images/projects/project-01/cover-01.jpg",
@@ -115,10 +116,10 @@ const about = {
         ],
       },
       {
-        company: "Department of Education",
+        company: "Department of education ",
         timeframe: "2018 - 2021",
-        role: "Tutor",
-        achievements: [<>Managed school data and maintained student performance records.</>],
+        role: "Tutoring",
+        achievements: [<>Managing school data. For all students marks.</>],
         images: [],
       },
     ],
@@ -133,7 +134,7 @@ const about = {
         name: "University of South Africa (UNISA)",
         description: (
           <>
-            Studied <strong>Higher Certificate in Mathematics and Statistics</strong> — focused on
+            Studied <strong>Higher Certificate in Mathematics and Statistics</strong> – focused on
             analytical thinking, probability, and data interpretation.
           </>
         ),
@@ -151,133 +152,92 @@ const about = {
         name: "Retail Customer Service",
         description: (
           <>
-            Completed <strong>Certificate in Retail Customer Service</strong> — gaining skills in
-            communication, data handling, and customer relations.
+            Completed <strong>Certificate in Retail Customer Service</strong> – learning effective
+            communication, customer handling, and professionalism in retail.
           </>
         ),
       },
     ],
   },
 
-  // ✅ UPDATED TECHNICAL SECTION WITH INLINE STYLES + ANIMATION
+  // ✅ UPDATED TECHNICAL SECTION
   technical: {
     display: true,
     title: "Technical Skills",
     skills: [
       {
         title: "Frontend Development",
-        level: 90,
         description: (
           <>
-            Expertise in <strong>React.js, Next.js, HTML, CSS, JavaScript (ES6+)</strong>, and{" "}
-            <strong>TailwindCSS</strong>. Builds fast, accessible, and SEO-optimized UIs with API
-            integration and state management (Redux Toolkit, Context API).
+            Proficient in <strong>HTML, CSS, JavaScript (ES6+), React.js, Next.js</strong> and
+            <strong> TailwindCSS</strong> to build fast, accessible, and responsive UIs. Skilled at
+            integrating APIs and managing state with Redux Toolkit and Context API.
           </>
         ),
+        images: [
+          {
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Frontend projects",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         title: "Backend Development",
-        level: 85,
         description: (
           <>
-            Skilled in <strong>Node.js, Express.js, MongoDB, and PHP</strong> for creating robust
-            REST APIs, authentication systems (JWT, OAuth), and scalable backend services.
+            Experienced with <strong>Node.js, Express.js, MongoDB, and PHP</strong> for scalable
+            backend systems. Builds RESTful APIs, authentication (JWT, OAuth), and secure data
+            handling pipelines.
           </>
         ),
+        images: [
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Backend architecture",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         title: "Programming & Tools",
-        level: 80,
         description: (
           <>
-            Proficient with <strong>Python</strong> for scripting and automation. Uses{" "}
-            <strong>Git, GitHub, VS Code, Cloudinary</strong> and follows best CI/CD workflows.
+            Strong in <strong>Python</strong> for automation, data analysis, and problem solving.
+            Familiar with <strong>Git, GitHub, VS Code, and Cloudinary</strong> for development
+            workflow and CI/CD pipelines.
           </>
         ),
+        images: [
+          {
+            src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Tools & workflow",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
-        title: "UI/UX Design",
-        level: 75,
+        title: "UI/UX & Prototyping",
         description: (
           <>
-            Designs and prototypes in <strong>Figma</strong> — transforming creative concepts into
-            elegant, responsive interfaces.
+            Designs clean, user-centered interfaces using <strong>Figma</strong> and integrates them
+            seamlessly into React or Next.js projects. Advocates for accessibility and performance.
           </>
         ),
+        images: [
+          {
+            src: "/images/projects/project-01/cover-05.jpg",
+            alt: "UI/UX design",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
-};
-
-// 🎨 Inline Animated Component for Rendering Technical Skills
-export const TechnicalSkills = () => {
-  const containerStyle = {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-    gap: "20px",
-    padding: "20px",
-  };
-
-  const cardStyle = {
-    backgroundColor: "#0f172a",
-    borderRadius: "16px",
-    padding: "20px",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
-    color: "white",
-    transition: "transform 0.3s ease",
-  };
-
-  const titleStyle = {
-    fontSize: "18px",
-    fontWeight: "600",
-    marginBottom: "10px",
-    color: "#38bdf8",
-  };
-
-  const barContainerStyle = {
-    height: "8px",
-    backgroundColor: "#1e293b",
-    borderRadius: "4px",
-    overflow: "hidden",
-    marginTop: "12px",
-  };
-
-  const descriptionStyle = {
-    fontSize: "14px",
-    color: "#cbd5e1",
-    marginTop: "8px",
-    lineHeight: "1.6",
-  };
-
-  return (
-    <div style={containerStyle}>
-      {about.technical.skills.map((skill, index) => (
-        <motion.div
-          key={index}
-          style={cardStyle}
-          whileHover={{ scale: 1.03 }}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-        >
-          <div style={titleStyle}>{skill.title}</div>
-          <div style={descriptionStyle}>{skill.description}</div>
-
-          <div style={barContainerStyle}>
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: `${skill.level}%` }}
-              transition={{ duration: 1 }}
-              style={{
-                height: "100%",
-                background: "linear-gradient(90deg, #38bdf8, #3b82f6)",
-              }}
-            />
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  );
 };
 
 const blog = {
@@ -300,13 +260,34 @@ const gallery = {
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
   images: [
-    { src: "/images/gallery/horizontal-1.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/horizontal-2.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/horizontal-3.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/horizontal-4.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/vertical-1.jpg", alt: "image", orientation: "vertical" },
+    {
+      src: "/images/gallery/horizontal-1.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/horizontal-2.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/horizontal-3.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/horizontal-4.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-1.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
   ],
 };
 
+// Export the structured objects
 export { person, newsletter, social, home, about, blog, work, gallery };
 
