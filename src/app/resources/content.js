@@ -133,61 +133,180 @@ const about = {
     ],
   },
   studies: {
-    display: true,
-    title: "Studies",
-    institutions: [
-      {
-        name: "UNISA",
-        description: <> Not Completed Higher Certificate in Mathematics and Statistics.</>,
-      },
-      {
-        name: "Retail customer service",
-        description: <> Completed  Certificate in retail.</>,
-      },
-      {
-        name: "Melsoft Academy",
-        description: <>Studied Software Engineering.(Not completed) </>,
-      },
-    ],
-  },
-  technical: {
-    display: true,
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: <>Building next-gen apps with Next.js + Once UI + Supabase. For other projects </>,
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
-  },
-};
-
+  display: true,
+  title: "Education & Studies",
+  institutions: [
+    {
+      name: "University of South Africa (UNISA)",
+      description: (
+        <>
+          Pursued a <strong>Higher Certificate in Mathematics and Statistics</strong> — 
+          program not yet completed. Developed a strong foundation in analytical reasoning,
+          quantitative analysis, and applied statistics.
+        </>
+      ),
+    },
+    {
+      name: "Retail Customer Service Program",
+      description: (
+        <>
+          Completed a <strong>Certificate in Retail Customer Service</strong>, focusing on 
+          customer engagement, communication skills, and service excellence within 
+          professional retail environments.
+        </>
+      ),
+    },
+    {
+      name: "Melsoft Academy",
+      description: (
+        <>
+          Studied <strong>Software Engineering</strong> — course not yet completed. 
+          Acquired skills in <strong>HTML, CSS, JavaScript, React, PHP, and Python</strong> 
+          with practical projects covering frontend and backend development.
+        </>
+      ),
+    },
+  ],
+},
+technical: {
+  display: true,
+  title: "Technical Skills",
+  skills: [
+    {
+      title: "React.js & Frontend Engineering",
+      description: (
+        <>
+          Expert in building high-performance, responsive, and accessible user interfaces
+          using <strong>React 18+</strong>, <strong>Redux Toolkit</strong>, 
+          <strong> Context API</strong>, and <strong>React Query</strong>. 
+          Skilled in implementing component-driven architecture, hooks, code-splitting, 
+          lazy loading, and performance optimization with <strong>memo</strong> and 
+          <strong>useCallback</strong>. 
+          Able to design and prototype rapidly in <strong>Figma</strong> using <strong>Once UI</strong> and 
+          <strong>TailwindCSS</strong>.
+        </>
+      ),
+      images: [
+        {
+          src: "/images/projects/react-dashboard.jpg",
+          alt: "React dashboard project",
+          width: 16,
+          height: 9,
+        },
+        {
+          src: "/images/projects/react-animation.jpg",
+          alt: "React animation interface",
+          width: 16,
+          height: 9,
+        },
+      ],
+    },
+    {
+      title: "Next.js & Modern Web Architecture",
+      description: (
+        <>
+          Experienced in building full-stack, server-rendered, and statically generated 
+          applications using <strong>Next.js 14+</strong> with <strong>App Router</strong>, 
+          <strong>Server Components</strong>, and <strong>API Routes</strong>. 
+          Familiar with <strong>SSR</strong>, <strong>SSG</strong>, <strong>ISR</strong>, and 
+          <strong>Edge Functions</strong> for high scalability. 
+          Integrated with <strong>Supabase</strong>, <strong>MongoDB</strong>, and 
+          <strong>Cloudinary</strong> for dynamic data-driven web apps.
+        </>
+      ),
+      images: [
+        {
+          src: "/images/projects/next-auth.jpg",
+          alt: "Next.js authentication app",
+          width: 16,
+          height: 9,
+        },
+      ],
+    },
+    {
+      title: "Backend Development (Node.js & Express)",
+      description: (
+        <>
+          Proficient in building secure RESTful APIs using <strong>Express.js</strong> with 
+          <strong>JWT authentication</strong>, <strong>OAuth (Google, Microsoft)</strong>, 
+          <strong>rate limiting</strong>, and <strong>Winston logging</strong>. 
+          Experienced with <strong>Mongoose</strong> and <strong>MongoDB Atlas</strong> for 
+          data persistence, and <strong>Cloudinary</strong> for file uploads.
+        </>
+      ),
+      images: [
+        {
+          src: "/images/projects/express-api.jpg",
+          alt: "Express.js backend project",
+          width: 16,
+          height: 9,
+        },
+      ],
+    },
+    {
+      title: "Version Control & Collaboration",
+      description: (
+        <>
+          Advanced knowledge of <strong>Git</strong> and <strong>GitHub</strong> workflows 
+          including feature branching, code reviews, pull requests, and CI/CD automation 
+          with <strong>Vercel</strong> and <strong>GitHub Actions</strong>.
+        </>
+      ),
+      images: [
+        {
+          src: "/images/projects/git-collaboration.jpg",
+          alt: "GitHub workflow collaboration",
+          width: 16,
+          height: 9,
+        },
+      ],
+    },
+    {
+      title: "UI/UX & Design Systems",
+      description: (
+        <>
+          Skilled in <strong>TailwindCSS</strong>, <strong>Ant Design</strong>, 
+          <strong>Material UI</strong>, and <strong>Framer Motion</strong> for 
+          creating beautiful, animated interfaces. 
+          Emphasizes accessibility, typography, and consistent design language 
+          across applications.
+        </>
+      ),
+      images: [
+        {
+          src: "/images/projects/ui-ux.jpg",
+          alt: "UI/UX project with Tailwind and Framer Motion",
+          width: 16,
+          height: 9,
+        },
+      ],
+    },
+    {
+      title: "Other Tools & Technologies",
+      description: (
+        <>
+          • <strong>Languages:</strong> JavaScript (ES6+), TypeScript, PHP, Python  
+          <br />
+          • <strong>Databases:</strong> MongoDB, MySQL, Supabase  
+          <br />
+          • <strong>Deployment:</strong> Vercel, Render, Netlify  
+          <br />
+          • <strong>Testing:</strong> Jest, React Testing Library, Cypress  
+          <br />
+          • <strong>Soft Skills:</strong> Problem-solving, teamwork, agile collaboration
+        </>
+      ),
+      images: [
+        {
+          src: "/images/projects/dev-tools.jpg",
+          alt: "Developer tools overview",
+          width: 16,
+          height: 9,
+        },
+      ],
+    },
+  ],
+},
 const blog = {
   path: "/blog",
   label: "Blog",
@@ -247,6 +366,7 @@ export {
   work,
   gallery,
 };
+
 
 
 
