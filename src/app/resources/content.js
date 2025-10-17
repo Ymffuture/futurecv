@@ -6,11 +6,11 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "software Engineer and Tutor",
+  role: "Software Engineer and Tutor",
   avatar: "/images/avatar.jpg",
   email: "futurekgomotso@gmail.com",
-  location: "Africa/Johannesburg", // Updated to valid IANA time zone
-  languages: ["English", "SiSwati", "IsiZulu" ],
+  location: "Africa/Johannesburg",
+  languages: ["English", "SiSwati", "IsiZulu"],
 };
 
 const newsletter = {
@@ -18,8 +18,8 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about design, technology, and share thoughts on the
+      intersection of creativity and engineering.
     </>
   ),
 };
@@ -33,7 +33,7 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/kgomotsonkosi-l",
+    link: "https://www.linkedin.com/in/kgomotsonkosi-l",
   },
   {
     name: "Threads",
@@ -56,14 +56,18 @@ const home = {
   headline: <>Building bridges between design and code</>,
   featured: {
     display: true,
-    title: <>Recent projects: <strong className="ml-4">Once UI portfolio & famacloud</strong></>,
+    title: (
+      <>
+        Recent projects:{" "}
+        <strong className="ml-4">Once UI Portfolio & Famacloud</strong>
+      </>
+    ),
     href: "/about",
   },
   subline: (
     <>
-      I'm {person.firstName}, a software engineer at{" "}
-      <b>Famacloud</b>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm {person.firstName}, a software engineer at <b>Famacloud</b>, where I craft
+      intuitive user experiences. After hours, I build my own projects.
     </>
   ),
 };
@@ -89,9 +93,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Kgomotso is a Johannesburg-based software engineer with a passion for transforming complex
-        challenges into simple, elegant design solutions. His work spans digital interfaces,
-        interactive experiences, and the convergence of design and technology.
+        Kgomotso is a Johannesburg-based software engineer with a passion for transforming
+        complex challenges into simple, elegant design solutions. His work spans digital
+        interfaces, interactive experiences, and the convergence of design and technology.
       </>
     ),
   },
@@ -100,14 +104,11 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Department of South Africa statistics ",
+        company: "Department of South Africa Statistics",
         timeframe: "2022",
-        role: "field worker",
+        role: "Field Worker",
         achievements: [
-          <>
-          Clean and open data capturing using the latest technology .
-          </>,
-          
+          <>Performed clean and accurate data capturing using modern digital tools.</>,
         ],
         images: [
           {
@@ -119,56 +120,55 @@ const about = {
         ],
       },
       {
-        company: "Department of education ",
+        company: "Department of Education",
         timeframe: "2018 - 2021",
-        role: "Tutoring",
+        role: "Tutor",
         achievements: [
-          <>
-            Managing school data. For all students marks. 
-          </>,
-          
+          <>Managed school data and maintained academic records for all students.</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-  display: true,
-  title: "Education & Studies",
-  institutions: [
-    {
-      name: "University of South Africa (UNISA)",
-      description: (
-        <>
-          Pursued a <strong>Higher Certificate in Mathematics and Statistics</strong> — 
-          program not yet completed. Developed a strong foundation in analytical reasoning,
-          quantitative analysis, and applied statistics.
-        </>
-      ),
-    },
-    {
-      name: "Retail Customer Service Program",
-      description: (
-        <>
-          Completed a <strong>Certificate in Retail Customer Service</strong>, focusing on 
-          customer engagement, communication skills, and service excellence within 
-          professional retail environments.
-        </>
-      ),
-    },
-    {
-      name: "Melsoft Academy",
-      description: (
-        <>
-          Studied <strong>Software Engineering</strong> — course not yet completed. 
-          Acquired skills in <strong>HTML, CSS, JavaScript, React, PHP, and Python</strong> 
-          with practical projects covering frontend and backend development.
-        </>
-      ),
-    },
-  ],
-},
-technical: {
+    display: true,
+    title: "Education & Studies",
+    institutions: [
+      {
+        name: "University of South Africa (UNISA)",
+        description: (
+          <>
+            Pursued a <strong>Higher Certificate in Mathematics and Statistics</strong> — 
+            program not yet completed. Developed strong analytical reasoning and quantitative
+            problem-solving skills.
+          </>
+        ),
+      },
+      {
+        name: "Retail Customer Service Program",
+        description: (
+          <>
+            Completed a <strong>Certificate in Retail Customer Service</strong>, focusing on
+            customer engagement, communication, and service excellence.
+          </>
+        ),
+      },
+      {
+        name: "Melsoft Academy",
+        description: (
+          <>
+            Studied <strong>Software Engineering</strong> — course not yet completed. Acquired
+            skills in <strong>HTML, CSS, JavaScript, React, PHP, and Python</strong> through
+            practical full-stack projects.
+          </>
+        ),
+      },
+    ],
+  },
+};
+
+// ✅ close `about` properly before defining technical
+const technical = {
   display: true,
   title: "Technical Skills",
   skills: [
@@ -176,13 +176,11 @@ technical: {
       title: "React.js & Frontend Engineering",
       description: (
         <>
-          Expert in building high-performance, responsive, and accessible user interfaces
-          using <strong>React 18+</strong>, <strong>Redux Toolkit</strong>, 
-          <strong> Context API</strong>, and <strong>React Query</strong>. 
-          Skilled in implementing component-driven architecture, hooks, code-splitting, 
-          lazy loading, and performance optimization with <strong>memo</strong> and 
-          <strong>useCallback</strong>. 
-          Able to design and prototype rapidly in <strong>Figma</strong> using <strong>Once UI</strong> and 
+          Expert in building high-performance, responsive, and accessible user interfaces using{" "}
+          <strong>React 18+</strong>, <strong>Redux Toolkit</strong>, <strong>Context API</strong>, and{" "}
+          <strong>React Query</strong>. Skilled in component-driven architecture, hooks, code-splitting,
+          lazy loading, and optimization using <strong>memo</strong> and <strong>useCallback</strong>.
+          Experienced in rapid prototyping with <strong>Figma</strong>, <strong>Once UI</strong>, and{" "}
           <strong>TailwindCSS</strong>.
         </>
       ),
@@ -205,13 +203,12 @@ technical: {
       title: "Next.js & Modern Web Architecture",
       description: (
         <>
-          Experienced in building full-stack, server-rendered, and statically generated 
-          applications using <strong>Next.js 14+</strong> with <strong>App Router</strong>, 
-          <strong>Server Components</strong>, and <strong>API Routes</strong>. 
-          Familiar with <strong>SSR</strong>, <strong>SSG</strong>, <strong>ISR</strong>, and 
-          <strong>Edge Functions</strong> for high scalability. 
-          Integrated with <strong>Supabase</strong>, <strong>MongoDB</strong>, and 
-          <strong>Cloudinary</strong> for dynamic data-driven web apps.
+          Experienced in building full-stack, server-rendered, and statically generated applications
+          using <strong>Next.js 14+</strong> with <strong>App Router</strong>, <strong>Server Components</strong>,
+          and <strong>API Routes</strong>. Proficient with <strong>SSR</strong>, <strong>SSG</strong>,
+          <strong>ISR</strong>, and <strong>Edge Functions</strong>. Integrated with{" "}
+          <strong>Supabase</strong>, <strong>MongoDB</strong>, and <strong>Cloudinary</strong> for
+          dynamic web apps.
         </>
       ),
       images: [
@@ -227,11 +224,11 @@ technical: {
       title: "Backend Development (Node.js & Express)",
       description: (
         <>
-          Proficient in building secure RESTful APIs using <strong>Express.js</strong> with 
-          <strong>JWT authentication</strong>, <strong>OAuth (Google, Microsoft)</strong>, 
-          <strong>rate limiting</strong>, and <strong>Winston logging</strong>. 
-          Experienced with <strong>Mongoose</strong> and <strong>MongoDB Atlas</strong> for 
-          data persistence, and <strong>Cloudinary</strong> for file uploads.
+          Proficient in creating secure RESTful APIs using <strong>Express.js</strong> with{" "}
+          <strong>JWT authentication</strong>, <strong>OAuth (Google, Microsoft)</strong>,{" "}
+          <strong>rate limiting</strong>, and <strong>Winston logging</strong>. Experienced with{" "}
+          <strong>Mongoose</strong> and <strong>MongoDB Atlas</strong> for persistence and{" "}
+          <strong>Cloudinary</strong> for file management.
         </>
       ),
       images: [
@@ -247,9 +244,9 @@ technical: {
       title: "Version Control & Collaboration",
       description: (
         <>
-          Advanced knowledge of <strong>Git</strong> and <strong>GitHub</strong> workflows 
-          including feature branching, code reviews, pull requests, and CI/CD automation 
-          with <strong>Vercel</strong> and <strong>GitHub Actions</strong>.
+          Advanced in <strong>Git</strong> and <strong>GitHub</strong> workflows including feature
+          branching, pull requests, and CI/CD pipelines with <strong>Vercel</strong> and{" "}
+          <strong>GitHub Actions</strong>.
         </>
       ),
       images: [
@@ -265,11 +262,9 @@ technical: {
       title: "UI/UX & Design Systems",
       description: (
         <>
-          Skilled in <strong>TailwindCSS</strong>, <strong>Ant Design</strong>, 
-          <strong>Material UI</strong>, and <strong>Framer Motion</strong> for 
-          creating beautiful, animated interfaces. 
-          Emphasizes accessibility, typography, and consistent design language 
-          across applications.
+          Skilled in <strong>TailwindCSS</strong>, <strong>Ant Design</strong>,{" "}
+          <strong>Material UI</strong>, and <strong>Framer Motion</strong> to create beautiful, animated,
+          and accessible interfaces with a consistent design language.
         </>
       ),
       images: [
@@ -306,7 +301,8 @@ technical: {
       ],
     },
   ],
-},
+};
+
 const blog = {
   path: "/blog",
   label: "Blog",
@@ -327,47 +323,13 @@ const gallery = {
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
   images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
+    { src: "/images/gallery/horizontal-1.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/horizontal-2.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/horizontal-3.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/horizontal-4.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/vertical-1.jpg", alt: "image", orientation: "vertical" },
   ],
 };
 
-// Export the structured objects
-export {
-  person,
-  newsletter,
-  social,
-  home,
-  about,
-  blog,
-  work,
-  gallery,
-};
-
-
-
-
+export { person, newsletter, social, home, about, technical, blog, work, gallery };
 
