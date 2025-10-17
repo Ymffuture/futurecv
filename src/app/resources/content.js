@@ -62,7 +62,7 @@ const home = {
   subline: (
     <>
       I'm {person.firstName}, a software engineer at{" "}
-      <Logo icon={true} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }} />, where I craft intuitive
+      <b>Famacloud</b>, where I craft intuitive
       <br /> user experiences. After hours, I build my own projects.
     </>
   ),
@@ -243,5 +243,6 @@ export {
   work,
   gallery,
 };
+
 
 
